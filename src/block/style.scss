@@ -31,14 +31,16 @@
       padding: 30px;
     }
     .price-block-features {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      li {
-        padding: 20px;
-      }
-      li:nth-child(odd) {
-        background-color: #ccc;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          padding: 20px;
+        }
+        li:nth-child(odd) {
+          background-color: #ccc;
+        }
       }
     }
     .price-block-button {

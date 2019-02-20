@@ -11,7 +11,12 @@ import './editor.scss';
 
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
-const { PlainText } = wp.editor;
+const { PlainText, InnerBlocks } = wp.editor;
+
+const ListTemplate = [
+	[ 'core/list', {}, [ ] ],
+];
+
 /**
  * Register: aa Gutenberg Block.
  *
@@ -78,12 +83,13 @@ registerBlockType( 'cgb/block-price-list', {
 							value={ price }
 							onChange={ onChangePrice }
 						/>
-						<ul className="price-block-features">
-							<li>1</li>
-							<li>2</li>
-							<li>3</li>
-						</ul>
-						<a href="/" className="price-block-button" role="button">BUY</a>
+						<div className="price-block-features">
+							<InnerBlocks 
+								template={ ListTemplate }
+								templateLock="all"
+							/>
+						</div>
+						<a href="/" className="price-block-button" role="button">{ __( 'Buy Now' ) }</a>
 					</div>
 				</div>
 			</div>
@@ -111,12 +117,10 @@ registerBlockType( 'cgb/block-price-list', {
 				<div className="price-block-inner">
 					<h3 className="price-block-title">{ title }</h3>
 					<p className="price-block-value">{ price }</p>
-					<ul className="price-block-features">
-						<li>1</li>
-						<li>2</li>
-						<li>3</li>
-					</ul>
-					<a href="/" className="price-block-button" role="button">BUY</a>
+					<div className="price-block-features">
+						<InnerBlocks.Content />
+					</div>
+					<a href="/" className="price-block-button" role="button">{ __( 'Buy Now' ) }</a>
 				</div>
 			</div>
 		);
