@@ -4,6 +4,59 @@ https://codepen.io/ig_design/pen/omQXoQ
 https://codepen.io/craftjd/pen/QYBKPp
 https://codepen.io/FilipVitas/pen/NoOmrE
 https://codepen.io/tiffachoo/pen/JyWmbR
+https://codepen.io/KamilDyrek/pen/rPKOaV
+https://codepen.io/joshuaward/pen/XOZVNO
+https://codepen.io/AMack17/pen/vbdzRy
+https://codepen.io/simoberny/pen/bzLRYe
+https://codepen.io/lucagez/pen/BMmKeK - lazy loading 
+https://codepen.io/letsbleachthis/pen/zewKYE - scroller site
+https://codepen.io/creativeocean/pen/QZBoMB - image zoom
+https://codepen.io/feather/pen/xMxGpR - a11y and UX
+https://codepen.io/littlesnippets/pen/vKpvGP - blog/event post hover
+
+
+https://codepen.io/joshuajcollinsworth/pen/MLjVrQ - vue example
+https://codepen.io/ig_design/
+
+
+//
+// Expanding grid on click
+//
+// $(".desktop-wrapper .option").click(function(){
+//    $(".option").removeClass("active");
+//    $(this).addClass("active");
+// });wddddtdf
+console.clear();
+
+(function () {
+  const options = document.getElementsByClassName('option');
+
+  console.log(options);
+
+  let toggleOption = (e) => {
+    console.log('Toggling option...');
+    console.log(e)
+    // element.ClassList.toggle('active');
+  }
+
+  Array.from(options).forEach(element => {
+    // console.log(element)
+    element.addEventListener('click', (e) => {
+      if (element.classList.contains('active')) {
+        console.log('already active');
+        return;
+      } else {
+        Array.from(options).forEach(ele => {
+          ele.classList.remove('active');
+        })
+        element.classList.toggle("active");
+      }
+    });
+  })
+}())
+
+
+https://deliciousbrains.com/custom-gutenberg-block/
 
 
 
