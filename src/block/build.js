@@ -1,8 +1,18 @@
+// ideas
+https://codepen.io/bssjackson/pen/OXXwWq
+https://codepen.io/ig_design/pen/omQXoQ
+https://codepen.io/craftjd/pen/QYBKPp
+https://codepen.io/FilipVitas/pen/NoOmrE
+https://codepen.io/tiffachoo/pen/JyWmbR
+
+
+
+//build
 https://deliciousbrains.com/npm-build-script/
 
 {
-  "author": "",
-    "description": "",
+  "author": "",                               "author": ""
+    "description": "",                          "description": "",
       "main": "index.js",
         "name": "npm-test",
           "private": true,
